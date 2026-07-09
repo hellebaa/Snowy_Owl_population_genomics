@@ -1,0 +1,1 @@
+sample_id,individual_id,library_id,country,region,population_final,population_source_rule,latitude,longitude,collection_year,sex_field,sex_genomic,sex_final,mean_depth,missingness,relatedness_flag,contamination_flag,include_pca,include_pixy,include_roh,include_gone,notes

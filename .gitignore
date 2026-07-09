@@ -1,0 +1,55 @@
+**/.DS_Store
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+Rplots.pdf
+
+# Local/private configuration
+config/local_paths.yml
+
+# Large or sensitive data should not be committed.
+data/external/*
+data/processed/*
+!data/external/.gitkeep
+!data/processed/.gitkeep
+
+# Analysis outputs can be regenerated.
+results/figures/*
+results/tables/*
+!results/figures/.gitkeep
+!results/tables/.gitkeep
+
+# Manuscript build/design artifacts should not be committed here.
+manuscript/*.ai
+manuscript/*.tmp
+manuscript/~*
+
+# Genomics data and indexes
+*.bam
+*.bai
+*.cram
+*.crai
+*.sam
+*.vcf
+*.vcf.gz
+*.bcf
+*.bcf.csi
+*.tbi
+*.bed
+*.bim
+*.fam
+*.pgen
+*.pvar
+*.psam
+*.eigenvec
+*.eigenval
+
+# Temporary files
+*.tmp
+*.log
+*.out
+*.err
+
+# Small, curated BED-like metadata are part of the reproducible analysis.
+!data/metadata/centromeres/*.bed

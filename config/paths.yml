@@ -1,0 +1,35 @@
+# Version-controlled path template.
+# Copy to config/local_paths.yml and edit local/HPC-specific paths there.
+
+data_external: "data/external"
+data_processed: "data/processed"
+metadata: "data/metadata/samples_curated.csv"
+pixy_dir: "data/external/pixy"
+pixy_metadata_dir: "data/metadata/pixy"
+gone_dir: "data/external/gone"
+roh_dir: "data/external/roh"
+centromere_bed: "data/metadata/centromeres/putative_centromeres.bed"
+pericentromere_flank_bp: 1000000
+min_centromere_region_sites: 1000
+genome_gff: "data/external/genome/bBubSca1.1.hap1.gff"
+repeatmasker_out: "data/external/genome/bBubSca1.1.hap1.fasta.out"
+autosomal_genome_size_bp: 1173697940
+gone_generation_time_years: 8
+gone_present_year: 2021
+gone_plot_min_generation: 1
+gone_plot_max_years_before_present: 1600
+gone_temperature_file: "data/external/gone/arctic2014temperature-v1.1.txt"
+min_fst_snps: 10
+fst_outlier_quantile: 0.999
+results_figures: "results/figures"
+results_tables: "results/tables"
+
+# Expected large inputs, stored outside Git.
+autosomal_snp_vcf: "data/external/SnowyOwl_autosomes_finalFilters_noContam.recalc.vcf.gz"
+autosomal_all_sites_vcf: "data/external/SnowyOwl_autosomes_allSites_noContam.vcf.gz"
+pixy_all_pi: "data/external/pixy/SnowyOwl_ALL_pi.txt"
+pixy_all_tajima_d: "data/external/pixy/SnowyOwl_ALL_tajima_d.txt"
+pixy_regions_pi: "data/external/pixy/SnowyOwl_regions_pi.txt"
+pixy_regions_tajima_d: "data/external/pixy/SnowyOwl_regions_tajima_d.txt"
+pixy_regions_fst: "data/external/pixy/SnowyOwl_regions_fst.txt"
+pixy_regions_dxy: "data/external/pixy/SnowyOwl_regions_dxy.txt"
