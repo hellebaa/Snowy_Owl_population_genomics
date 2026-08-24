@@ -2,7 +2,9 @@ column,description,allowed_values_or_format
 sample_id,Stable sample identifier used in VCFs and downstream files,Text; must match analysis input files
 individual_id,Biological individual identifier,Text
 library_id,Sequencing library or lane identifier if applicable,Text or blank
+sample_short_id,Short sample identifier used in manuscript/sample tables,Text
 country,Country or territory of sampling,Text
+location,Sampling locality or regional description from original metadata,Text or blank
 region,Geographic region used for summaries,Text
 population_final,Final population grouping used in manuscript analyses,Text
 population_source_rule,How population_final was assigned,Text; cite rule or source
@@ -12,11 +14,16 @@ collection_year,Year of collection,YYYY or blank
 sex_field,Sex recorded from field or museum metadata,Female; Male; Unknown; blank
 sex_genomic,Sex inferred from genomic depth/missingness,Female; Male; Unknown; blank
 sex_final,Final sex used in analyses,Female; Male; Unknown; blank
+age,Age class from original metadata,Text or blank
+tissue,Tissue type from original metadata,Text or blank
 mean_depth,Mean autosomal sequencing depth after filtering,Numeric or blank
 missingness,Sample-level missingness after filtering,Numeric proportion or blank
+heterozygosity,Sample-level autosomal heterozygosity after filtering,Numeric proportion or blank
+qc_flags,Genomic QC flags from historical QC table,OK; HIGH_MISSING; blank
 relatedness_flag,Relatedness/QC decision,keep; remove; review; blank
 contamination_flag,Contamination/QC decision,keep; remove; review; blank
 include_pca,Include sample in PCA analyses,TRUE; FALSE
+include_pca_filtered,Include sample in filtered manuscript-style PCA output,TRUE; FALSE
 include_pixy,Include sample in pixy analyses,TRUE; FALSE
 include_roh,Include sample in ROH/heterozygosity analyses,TRUE; FALSE
 include_gone,Include sample in GONE analyses,TRUE; FALSE

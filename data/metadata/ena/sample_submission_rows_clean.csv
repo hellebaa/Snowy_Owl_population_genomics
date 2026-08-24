@@ -1,0 +1,55 @@
+submission_sample_name,submitted_material_or_library_type,submitted_concentration_ng_ul,submitted_volume_ul,submitted_total_dna_rna_ug,requested_output,submission_comments,submission_batch,source_file_submission_table,submission_sample_code,sample_id
+Sample X1,Truseq,,,0,8 Gb,you have these libraries already,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,X1,FNM08_merged_X1;GRL01_merged_X11;GRL02_merged_X12;GRL03_merged_X13;GRL04_merged_X14;GRL05_merged_X15;GRL06_merged_X16;GRL07_merged_X17;GRL08_merged_X18;GRL09_merged_X19
+Sample X2,Truseq,,,0,8 Gb,you have these libraries already,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,X2,FNM09_merged_X2;GRL10_merged_X20;SKW01_merged_X21;SKW02_merged_X22;SKW03_merged_X23;SKW04_merged_X24;SKW05_merged_X25;SKW06_merged_X26;SKW07_merged_X27;SKW08_merged_X28;SKW09_merged_X29
+Sample X3,Truseq,,,0,16 Gb,you have these libraries already,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,X3,FNM10_merged_X3;SKW10_merged_X30;SKW11_merged_X31;SKW12_merged_X32;SKW13_merged_X33;SKW14_merged_X34;SKW15_merged_X35;SKW16_merged_X36;SKW17_merged_X37
+Sample X4,Truseq,,,0,16 Gb,you have these libraries already,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,X4,FNM11_merged_X4
+Sample X6,Truseq,,,0,8 Gb,you have these libraries already,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,X6,FNM13_merged_X6
+Sample X8,Truseq,,,0,8 Gb,you have these libraries already,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,X8,FNM15_merged_X8
+Sample X11,Truseq,,,0,8 Gb,you have these libraries already,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,X11,GRL01_merged_X11
+Sample X12,Truseq,,,0,16 Gb,you have these libraries already,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,X12,GRL02_merged_X12
+Sample X13,Truseq,,,0,16 Gb,you have these libraries already,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,X13,GRL03_merged_X13
+Sample X14,Truseq,,,0,16 Gb,you have these libraries already,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,X14,GRL04_merged_X14
+Sample X15,Truseq,,,0,16 Gb,you have these libraries already,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,X15,GRL05_merged_X15
+Sample X16,Truseq,,,0,8 Gb,you have these libraries already,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,X16,GRL06_merged_X16
+Sample X17,Truseq,,,0,8 Gb,you have these libraries already,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,X17,GRL07_merged_X17
+Sample X18,Truseq,,,0,8 Gb,you have these libraries already,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,X18,GRL08_merged_X18
+Sample X19,Truseq,,,0,16 Gb,you have these libraries already,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,X19,GRL09_merged_X19
+Sample X20,Truseq,,,0,16 Gb,you have these libraries already,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,X20,GRL10_merged_X20
+Sample X21,Truseq,,,0,16 Gb,you have these libraries already,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,X21,SKW01_merged_X21
+Sample X22,Truseq,,,0,16 Gb,you have these libraries already,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,X22,SKW02_merged_X22
+Sample X23,Truseq,,,0,16 Gb,you have these libraries already,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,X23,SKW03_merged_X23
+Sample X24,Truseq,,,0,16 Gb,you have these libraries already,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,X24,SKW04_merged_X24
+Sample X25,Truseq,,,0,16 Gb,you have these libraries already,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,X25,SKW05_merged_X25
+Sample X26,Truseq,,,0,8 Gb,you have these libraries already,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,X26,SKW06_merged_X26
+Sample X27,Truseq,,,0,16 Gb,you have these libraries already,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,X27,SKW07_merged_X27
+Sample X28,Truseq,,,0,16 Gb,you have these libraries already,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,X28,SKW08_merged_X28
+Sample X29,Truseq,,,0,8 Gb,you have these libraries already,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,X29,SKW09_merged_X29
+Sample X30,Truseq,,,0,16 Gb,you have these libraries already,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,X30,SKW10_merged_X30
+Sample X31,Truseq,,,0,16 Gb,you have these libraries already,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,X31,SKW11_merged_X31
+Sample X32,Truseq,,,0,16 Gb,you have these libraries already,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,X32,SKW12_merged_X32
+Sample X33,Truseq,,,0,8 Gb,you have these libraries already,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,X33,SKW13_merged_X33
+Sample X34,Truseq,,,0,8 Gb,you have these libraries already,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,X34,SKW14_merged_X34
+Sample X35,Truseq,,,0,16 Gb,you have these libraries already,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,X35,SKW15_merged_X35
+Sample X36,Truseq,,,0,8 Gb,you have these libraries already,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,X36,SKW16_merged_X36
+Sample X37,Truseq,,,0,16 Gb,you have these libraries already,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,X37,SKW17_merged_X37
+WRG1,,1.4133,97,137.0901,40 Gb,Thruplex,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,WRG1,WRG01_1-WRG1_S28_L001
+WRG2,,1.2466,97,120.9202,40 Gb,Thruplex,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,WRG2,WRG02_2-WRG2_S33_L001
+WRG3,,1.5266,97,148.0802,40 Gb,Thruplex,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,WRG3,WRG03_3-WRG3_S39_L001
+WRG5,,1.3,97,126.10000000000001,40 Gb,Thruplex,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,WRG5,WRG05_4-WRG5_S4_L001
+WRG8,,1.2066,97,117.04019999999998,40 Gb,Thruplex,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,WRG8,WRG08_5-WRG8_S10_L001
+WRG9,,0.7866,97,76.30019999999999,40 Gb,Thruplex,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,WRG9,WRG09_6-WRG9_S15_L001
+WRG10,,1.0733,97,104.11009999999999,40 Gb,Thruplex,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,WRG10,WRG10_7-WRG10_S19_L001
+WRG11,,1.2333,97,119.63010000000001,40 Gb,Thruplex,NSC_2023_Baalsrud_snowy_owl,old/lab_seq/Baalsrud_sample_table_SnowyOwl_22112023.xlsx,WRG11,WRG11_8-WRG11_S24_L001
+Sample X42,gDNA,13.33,110,1466.3,31 Gb,,NSC_2022_Boessenkool_snowy_owl,old/lab_seq/Boessenkool_sample_table_96_SnowyOwl_25052022.xlsx,X42,FNM01_9-X42_S17_L002
+Sample X43,gDNA,9.7,110,1067,31 Gb,,NSC_2022_Boessenkool_snowy_owl,old/lab_seq/Boessenkool_sample_table_96_SnowyOwl_25052022.xlsx,X43,FNM02_10-X43_S20_L002
+Sample X44,gDNA,19.3,110,2123,31 Gb,,NSC_2022_Boessenkool_snowy_owl,old/lab_seq/Boessenkool_sample_table_96_SnowyOwl_25052022.xlsx,X44,FNM03_11-X44_S23_L002
+Sample X45,gDNA,20,110,2200,31 Gb,,NSC_2022_Boessenkool_snowy_owl,old/lab_seq/Boessenkool_sample_table_96_SnowyOwl_25052022.xlsx,X45,FNM04_12-X45_S26_L002
+Sample X46,gDNA,17.3,110,1903,31 Gb,,NSC_2022_Boessenkool_snowy_owl,old/lab_seq/Boessenkool_sample_table_96_SnowyOwl_25052022.xlsx,X46,FNM05_13-X46_S29_L002
+Sample X47,gDNA,10.6,110,1166,31 Gb,,NSC_2022_Boessenkool_snowy_owl,old/lab_seq/Boessenkool_sample_table_96_SnowyOwl_25052022.xlsx,X47,FNM06_14-X47_S32_L002
+Sample X48,gDNA,20,110,2200,31 Gb,,NSC_2022_Boessenkool_snowy_owl,old/lab_seq/Boessenkool_sample_table_96_SnowyOwl_25052022.xlsx,X48,FNM07_15-X48_S35_L002
+Sample X49,gDNA,20,110,2200,31 Gb,,NSC_2022_Boessenkool_snowy_owl,old/lab_seq/Boessenkool_sample_table_96_SnowyOwl_25052022.xlsx,X49,FNM16_16-X49_S37_L002
+Sample X50,gDNA,20,110,2200,31 Gb,,NSC_2022_Boessenkool_snowy_owl,old/lab_seq/Boessenkool_sample_table_96_SnowyOwl_25052022.xlsx,X50,FNM17_17-X50_S18_L002
+Sample X51,gDNA,0.7,380,266,31 Gb,,NSC_2022_Boessenkool_snowy_owl,old/lab_seq/Boessenkool_sample_table_96_SnowyOwl_25052022.xlsx,X51,WRG32_18-X51_S21_L002
+Sample X52,gDNA,1.17,190,222.29999999999998,31 Gb,,NSC_2022_Boessenkool_snowy_owl,old/lab_seq/Boessenkool_sample_table_96_SnowyOwl_25052022.xlsx,X52,WRG46_19-X52_S24_L002
+Sample X53,gDNA,3.5,190,665,31 Gb,,NSC_2022_Boessenkool_snowy_owl,old/lab_seq/Boessenkool_sample_table_96_SnowyOwl_25052022.xlsx,X53,WRG48_20-X53_S27_L002
+Sample X54,gDNA,13,110,1430,31 Gb,,NSC_2022_Boessenkool_snowy_owl,old/lab_seq/Boessenkool_sample_table_96_SnowyOwl_25052022.xlsx,X54,WRG06_21-X54_S30_L002

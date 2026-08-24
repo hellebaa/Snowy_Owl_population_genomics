@@ -1,0 +1,5 @@
+metric,chromosome_class,n_windows,callable_sites,mean_unweighted,mean_weighted_by_sites,median
+pi,Macrochromosome,17330,27015364,0.006882,0.007105,0.006824
+pi,Microchromosome,6062,10815561,0.005809,0.005996,0.005711
+Tajima_D,Macrochromosome,16674,26711215,0.244041,0.24335,0.232959
+Tajima_D,Microchromosome,5555,10464442,0.218265,0.217928,0.203175

@@ -1,0 +1,9 @@
+run_id,sample_set,filter,n_generations,generation_time_years,present_year,min_ne_full_output,max_ne_full_output,most_recent_ne_full_output,oldest_ne_full_output,max_years_before_present_full_output,most_recent_ne_plotted
+all64_poly,All 64,Polymorphic sites,791,8,2021,154.737,1208280,154.737,63164,6328,154.737
+all64_maf005,All 64,MAF >= 0.005,791,8,2021,155.268,1545360,155.268,52013.6,6328,155.268
+all64_maf01,All 64,MAF >= 0.01,791,8,2021,7964.47,29638.1,19831.7,29462,6328,19831.7
+all64_maf02,All 64,MAF >= 0.02,755,8,2021,8818.94,32686.4,20042.9,32686.4,6040,20042.9
+highdepth24_poly,High-depth 24,Polymorphic sites,755,8,2021,8018.35,60170.5,18134,44122.3,6040,18134
+highdepth24_maf005,High-depth 24,MAF >= 0.005,755,8,2021,7623.54,69660.1,17157.1,47679.5,6040,17157.1
+highdepth24_maf01,High-depth 24,MAF >= 0.01,755,8,2021,7914.15,60659.4,16813.3,44849.7,6040,16813.3
+highdepth24_maf02,High-depth 24,MAF >= 0.02,755,8,2021,8694.29,57896,17401.4,41982.3,6040,17401.4

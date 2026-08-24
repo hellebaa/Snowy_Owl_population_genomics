@@ -1,0 +1,5 @@
+dataset,input_type,sample_filter,site_filter,n_samples,n_sites_or_snps,pc1_variance_percent,pc2_variance_percent,recommended_use
+"GATK autosomes, filtered",diploid SNP genotypes,Historical filtered PCA set; high-missingness and close-related samples removed,"Filtered autosomal SNPs, LD-pruned before PCA",63,,5.566,5.238,Figure S1 candidate
+ANGSD pseudohaploid autosomes,pseudohaploid alleles,QC-passing samples; relatedness_flag == keep; contamination_flag == keep,"Biallelic sites, MAC >= 3",49,38800,2.249,2.232,Figure S2 candidate
+ANGSD pseudohaploid Z,pseudohaploid alleles,All available ANGSD samples,"Biallelic sites, MAC >= 1",66,,6.97,4.26,Diagnostic only
+ANGSD pseudohaploid W,pseudohaploid alleles,All available ANGSD samples,"Biallelic sites, MAC >= 1",66,,37.451,1.934,Diagnostic only

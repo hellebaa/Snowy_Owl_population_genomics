@@ -1,0 +1,14 @@
+lane_omrf_name,lane_q30_fraction,lane_fraction,lane_total_fraction_all,lane_num_reads,lane_yield_gb,lane_submission_name,index1,index2,lane_library_prefix,source_file_lane_stats,lane_library_id
+ngs-056k24f9c0,0.9264,0.079,0.079,263405323,79.0215969,DAG-BS-6,CAGTCCAA,CGGTAATC,DAG-BS-6,old/lab_seq/snowy-owls_lanestats.xlsx,DAG-BS-6_S6
+ngs-1dd82fca4y,0.9274,0.0887,0.0887,295830536,88.7491608,DAG-BS-10,TCGCTGTT,CAAGTCGT,DAG-BS-10,old/lab_seq/snowy-owls_lanestats.xlsx,DAG-BS-10_S10
+ngs-1f5062rax7,0.9273,0.0579,0.0579,192995182,57.8985546,DAG-BS-5,ATGACGTC,CTTCCTTC,DAG-BS-5,old/lab_seq/snowy-owls_lanestats.xlsx,DAG-BS-5_S5
+ngs-280a24d21c,0.9321,0.0741,0.0741,247075695,74.1227085,DAG-BS-3,GTGAAGTG,GAGCAATC,DAG-BS-3,old/lab_seq/snowy-owls_lanestats.xlsx,DAG-BS-3_S3
+ngs-2kk14a3e3y,0.9343,0.0898,0.0898,299469776,89.8409328,DAG-BS-8,TAACCGGT,ATCGTCTC,DAG-BS-8,old/lab_seq/snowy-owls_lanestats.xlsx,DAG-BS-8_S8
+ngs-6kd053tc2y,0.9324,0.0726,0.0726,242231776,72.6695328,DAG-BS-9,ATCGATCG,TGGAAGCA,DAG-BS-9,old/lab_seq/snowy-owls_lanestats.xlsx,DAG-BS-9_S9
+ngs-98e2r888f7,0.9351,0.0757,0.0757,252620477,75.7861431,DAG-BS-1,CGGCTAAT,CTCGTTCT,DAG-BS-1,old/lab_seq/snowy-owls_lanestats.xlsx,DAG-BS-1_S1
+ngs-a15x8x4c7x,0.9324,0.0675,0.0675,225093071,67.5279213,DAG-BS-7,CGACGTTA,CTCTGGAT,DAG-BS-7,old/lab_seq/snowy-owls_lanestats.xlsx,DAG-BS-7_S7
+ngs-e779r6aayy,0.9333,0.0737,0.0737,245702028,73.7106084,DAG-BS-13,TTGGACGT,GAAGTGCT,DAG-BS-13,old/lab_seq/snowy-owls_lanestats.xlsx,DAG-BS-13_S13
+ngs-ke77t07ar2,0.9281,0.0757,0.0757,252613780,75.784134,DAG-BS-4,GTTACGCA,ATGGCGAT,DAG-BS-4,old/lab_seq/snowy-owls_lanestats.xlsx,DAG-BS-4_S4
+ngs-tf6x92ya7k,0.9293,0.0839,0.0839,279767054,83.9301162,DAG-BS-12,AGCGTGTT,CTTCGCAA,DAG-BS-12,old/lab_seq/snowy-owls_lanestats.xlsx,DAG-BS-12_S12
+ngs-tkr09f7rk3,0.9322,0.0574,0.0574,191400073,57.4200219,DAG-BS-2,GAATCCGA,AGCTAGTG,DAG-BS-2,old/lab_seq/snowy-owls_lanestats.xlsx,DAG-BS-2_S2
+ngs-xc5f2kefff,0.9333,0.0741,0.0741,247202562,74.1607686,DAG-BS-11,CATGGCTA,CACACATC,DAG-BS-11,old/lab_seq/snowy-owls_lanestats.xlsx,DAG-BS-11_S11

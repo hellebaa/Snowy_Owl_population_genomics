@@ -1,0 +1,5 @@
+sample_id_1,sample_id_2,sample_short_id_1,sample_short_id_2,population_1,population_2,king_kinship,relatedness_flag_1,relatedness_flag_2,notes
+FNM12_5-X5_S119_L004,FNM11_merged_X4,FNM12,FNM11,FN,FN,0.15341,review,remove,Pairwise KING kinship > 0.03 in autosomal pruned SNP dataset.
+FNM11_merged_X4,FNM15_merged_X8,FNM11,FNM15,FN,FN,0.142597,remove,remove,Pairwise KING kinship > 0.03 in autosomal pruned SNP dataset.
+FNM12_5-X5_S119_L004,FNM15_merged_X8,FNM12,FNM15,FN,FN,0.124879,review,remove,Pairwise KING kinship > 0.03 in autosomal pruned SNP dataset.
+WRG09_6-WRG9_S15_L001,GRL01_merged_X11,WRG09,GRL01,WR,GR,0.0374312,keep,keep,Pairwise KING kinship > 0.03 in autosomal pruned SNP dataset.

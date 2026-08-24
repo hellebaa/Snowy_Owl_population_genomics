@@ -1,0 +1,69 @@
+sample_short_id,mean_depth,missingness,heterozygosity,sex_field,sex_genomic,sex_final,qc_flags,relatedness_flag,contamination_flag,include_pca_filtered,include_pixy,include_roh,include_gone,notes
+FNM01,36.7607,6.9e-4,0.176339,NA,M,M,OK,keep,keep,T,T,T,T,
+FNM02,38.5168,8.28e-4,0.177176,NA,M,M,OK,keep,keep,T,T,T,T,
+FNM03,29.985,0.001556,0.176856,NA,F,F,OK,keep,keep,T,T,T,T,
+FNM04,30.6205,0.001011,0.177131,NA,M,M,OK,keep,keep,T,T,T,T,
+FNM05,38.835,6.96e-4,0.17626,NA,M,M,OK,keep,keep,T,T,T,T,
+FNM06,29.4068,0.003738,0.177319,NA,F,F,OK,keep,keep,T,T,T,T,
+FNM07,33.7752,5.62e-4,0.176351,NA,F,F,OK,keep,keep,T,T,T,T,
+FNM08,20.6575,0.083606,0.176093,NA,F,F,OK,keep,keep,T,T,T,F,
+FNM09,17.8621,0.21734,0.174765,NA,M,M,HIGH_MISSING,keep,review,T,T,T,F,High missingness flag in genomic QC.
+FNM10,19.8432,0.11524,0.174266,NA,M,M,OK,keep,keep,T,T,T,F,
+FNM11,18.5859,0.174215,0.177727,NA,M,M,OK,remove,keep,F,T,T,F,Close relatives flagged from historical relatedness notes.
+FNM12,22.7287,0.036456,0.179361,NA,F,F,OK,review,keep,T,T,T,F,Relatedness review flag from historical relatedness notes.
+FNM13,20.279,0.098701,0.174672,NA,F,F,OK,keep,keep,T,T,T,F,
+FNM15,20.4286,0.088825,0.177834,NA,M,M,OK,remove,keep,F,T,T,F,Close relatives flagged from historical relatedness notes.
+FNM16,29.1392,0.003308,0.176425,NA,F,F,OK,keep,keep,T,T,T,T,
+FNM17,30.4653,0.001931,0.174831,NA,M,M,OK,keep,keep,T,T,T,T,
+GRL01,20.6057,0.094511,0.175761,F,F,F,OK,keep,keep,T,T,T,F,
+GRL02,23.3349,0.034716,0.174883,F,F,F,OK,keep,keep,T,T,T,F,
+GRL03,20.062,0.121819,0.174488,F,F,F,OK,keep,keep,T,T,T,F,
+GRL04,16.2056,0.352517,0.305893,M,F,F,HIGH_MISSING,remove,remove,F,F,F,F,Excluded from no-contaminant/no-close-relative analyses.
+GRL05,17.1824,0.302178,0.173364,F,F,F,HIGH_MISSING,keep,review,T,T,T,F,High missingness flag in genomic QC.
+GRL06,19.0593,0.155286,0.175792,M,M,M,OK,keep,keep,T,T,T,F,
+GRL07,18.7382,0.19899,0.173877,M,M,M,OK,keep,keep,T,T,T,F,
+GRL08,19.1659,0.169029,0.175489,M,M,M,OK,keep,keep,T,T,T,F,
+GRL09,19.7907,0.121139,0.175148,M,M,M,OK,keep,keep,T,T,T,F,
+GRL10,20.0231,0.109933,0.174451,F,F,F,OK,keep,keep,T,T,T,F,
+NY01,34.6227,0.001028,0.174955,M,M,M,OK,keep,keep,T,T,T,T,
+NY02,30.1907,0.001573,0.175449,F,F,F,OK,keep,keep,T,T,T,T,
+NY03,39.117,0.001242,0.17682,F,F,F,OK,keep,keep,T,T,T,T,
+NY04,37.9196,0.001183,0.176612,F,F,F,OK,keep,keep,T,T,T,T,
+NY05,30.3413,0.001633,0.175777,F,F,F,OK,keep,keep,T,T,T,T,
+NY06,39.8806,0.001324,0.174735,F,F,F,OK,keep,keep,T,T,T,T,
+NY07,36.0472,8.05e-4,0.175102,F,F,F,OK,keep,keep,T,T,T,T,
+NY08,42.7896,0.002776,0.176217,F,F,F,OK,keep,keep,T,T,T,T,
+NY09,38.0175,0.001072,0.175905,F,F,F,OK,keep,keep,T,T,T,T,
+NY10,43.4045,0.002189,0.177129,F,F,F,OK,keep,keep,T,T,T,T,
+NY11,38.1991,0.001247,0.175649,M,M,M,OK,keep,keep,T,T,T,T,
+NY12,42.7727,0.001984,0.176652,F,F,F,OK,keep,keep,T,T,T,T,
+NY13,39.0516,0.001431,0.174612,M,M,M,OK,keep,keep,T,T,T,T,
+SKW01,19.5602,0.142626,0.174079,F,F,F,OK,keep,keep,T,T,T,F,
+SKW02,13.5986,0.597906,0.300752,F,F,F,HIGH_MISSING,remove,remove,F,F,F,F,Excluded from no-contaminant/no-close-relative analyses.
+SKW03,15.1504,0.45527,0.171789,F,F,F,HIGH_MISSING,keep,review,T,T,T,F,High missingness flag in genomic QC.
+SKW04,20.0106,0.146693,0.175941,M,M,M,OK,keep,keep,T,T,T,F,
+SKW05,20.3,0.164177,0.175182,M,M,M,OK,keep,keep,T,T,T,F,
+SKW06,20.3315,0.110379,0.176386,F,F,F,OK,keep,keep,T,T,T,F,
+SKW07,19.5675,0.149046,0.173856,F,F,F,OK,keep,keep,T,T,T,F,
+SKW08,20.0082,0.11694,0.175632,M,M,M,OK,keep,keep,T,T,T,F,
+SKW09,19.3174,0.149713,0.174686,M,M,M,OK,keep,keep,T,T,T,F,
+SKW10,17.4325,0.301012,0.176171,F,F,F,HIGH_MISSING,keep,review,T,T,T,F,High missingness flag in genomic QC.
+SKW11,17.9665,0.226546,0.175268,F,F,F,HIGH_MISSING,keep,review,T,T,T,F,High missingness flag in genomic QC.
+SKW12,18.9773,0.19961,0.175344,F,F,F,OK,keep,keep,T,T,T,F,
+SKW13,19.0425,0.191039,0.176976,F,F,F,OK,keep,keep,T,T,T,F,
+SKW14,21.9588,0.088438,0.176939,F,F,F,OK,keep,keep,T,T,T,F,
+SKW15,21.1477,0.166496,0.176529,F,F,F,OK,keep,keep,T,T,T,F,
+SKW16,17.938,0.255976,0.176022,F,F,F,HIGH_MISSING,keep,review,T,T,T,F,High missingness flag in genomic QC.
+SKW17,14.6781,0.500033,0.174811,M,M,M,HIGH_MISSING,keep,review,T,T,T,F,High missingness flag in genomic QC.
+WRG01,15.0981,0.498168,0.171853,NA,F,F,HIGH_MISSING,keep,review,F,T,T,F,High missingness flag in genomic QC.
+WRG02,12.454,0.668403,0.170869,NA,F,F,HIGH_MISSING,keep,review,T,T,T,F,High missingness flag in genomic QC.
+WRG03,19.8506,0.223967,0.171364,NA,F,F,HIGH_MISSING,keep,review,T,T,T,F,High missingness flag in genomic QC.
+WRG05,17.8388,0.321354,0.172801,NA,F,F,HIGH_MISSING,keep,review,T,T,T,F,High missingness flag in genomic QC.
+WRG06,23.8961,0.025951,0.174818,NA,F,F,OK,keep,keep,T,T,T,F,
+WRG08,18.9461,0.25645,0.1718,NA,F,F,HIGH_MISSING,keep,review,T,T,T,F,High missingness flag in genomic QC.
+WRG09,27.5231,0.04302,0.170814,NA,F,F,OK,keep,keep,T,T,T,T,
+WRG10,23.8736,0.105105,0.170339,NA,F,F,OK,keep,keep,T,T,T,F,
+WRG11,17.4762,0.359304,0.172207,NA,F,F,HIGH_MISSING,keep,review,T,T,T,F,High missingness flag in genomic QC.
+WRG32,28.6795,0.002672,0.175262,NA,F,F,OK,keep,keep,T,T,T,T,
+WRG46,24.8606,0.026,0.174328,NA,F,F,OK,keep,keep,T,T,T,F,
+WRG48,15.1921,0.445802,0.177008,NA,M,M,HIGH_MISSING,keep,review,T,T,T,F,High missingness flag in genomic QC.
