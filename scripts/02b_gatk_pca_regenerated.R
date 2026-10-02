@@ -175,32 +175,44 @@ for (run_id in names(pca_objects)) {
   )
 }
 
-axis_summary <- eigen_all |>
-  dplyr::filter(pc %in% c("PC1", "PC2")) |>
-  dplyr::select(run_id, pc, pve) |>
-  tidyr::pivot_wider(names_from = pc, values_from = pve)
+plot_regenerated_faceted <- function(x_pc, y_pc, filename_stub) {
+  axis_summary <- eigen_all |>
+    dplyr::filter(pc %in% c(x_pc, y_pc)) |>
+    dplyr::select(run_id, pc, pve) |>
+    tidyr::pivot_wider(names_from = pc, values_from = pve)
 
-facet_scores <- scores_all |>
-  dplyr::left_join(axis_summary, by = "run_id") |>
-  dplyr::mutate(
-    facet_label = paste0(run_label, "\nPC1 ", round(PC1.y, 1), "%; PC2 ", round(PC2.y, 1), "%")
-  )
+  facet_scores <- scores_all |>
+    dplyr::left_join(axis_summary, by = "run_id") |>
+    dplyr::mutate(
+      facet_label = paste0(
+        run_label, "\n",
+        x_pc, " ", round(.data[[paste0(x_pc, ".y")]], 1), "%; ",
+        y_pc, " ", round(.data[[paste0(y_pc, ".y")]], 1), "%"
+      )
+    )
 
-p_faceted <- ggplot(facet_scores, aes(x = PC1.x, y = PC2.x, color = population_final)) +
-  geom_hline(yintercept = 0, linewidth = 0.2, color = "grey82") +
-  geom_vline(xintercept = 0, linewidth = 0.2, color = "grey82") +
-  geom_point(size = 2.1, alpha = 0.9) +
-  facet_wrap(~ facet_label, scales = "free", ncol = 2) +
-  scale_color_manual(values = pop_colors, drop = FALSE, na.value = "grey45") +
-  labs(x = "PC1", y = "PC2", color = "Region") +
-  theme(
-    legend.position = "bottom",
-    panel.grid = element_blank(),
-    strip.text = element_text(size = 8.5)
-  )
+  p_faceted <- ggplot(
+    facet_scores,
+    aes(x = .data[[paste0(x_pc, ".x")]], y = .data[[paste0(y_pc, ".x")]], color = population_final)
+  ) +
+    geom_hline(yintercept = 0, linewidth = 0.2, color = "grey82") +
+    geom_vline(xintercept = 0, linewidth = 0.2, color = "grey82") +
+    geom_point(size = 2.1, alpha = 0.9) +
+    facet_wrap(~ facet_label, scales = "free", ncol = 2) +
+    scale_color_manual(values = pop_colors, drop = FALSE, na.value = "grey45") +
+    labs(x = x_pc, y = y_pc, color = "Region") +
+    theme(
+      legend.position = "bottom",
+      panel.grid = element_blank(),
+      strip.text = element_text(size = 8.5)
+    )
 
-ggsave(file.path(fig_dir, "SnowyOwl_PCA_GATK_regenerated_PC1_PC2_faceted.png"), p_faceted, width = 8.2, height = 7.0, dpi = 350)
-ggsave(file.path(fig_dir, "SnowyOwl_PCA_GATK_regenerated_PC1_PC2_faceted.pdf"), p_faceted, width = 8.2, height = 7.0)
+  ggsave(file.path(fig_dir, paste0(filename_stub, ".png")), p_faceted, width = 8.2, height = 7.0, dpi = 350)
+  ggsave(file.path(fig_dir, paste0(filename_stub, ".pdf")), p_faceted, width = 8.2, height = 7.0)
+}
+
+plot_regenerated_faceted("PC1", "PC2", "SnowyOwl_PCA_GATK_regenerated_PC1_PC2_faceted")
+plot_regenerated_faceted("PC3", "PC4", "SnowyOwl_PCA_GATK_regenerated_PC3_PC4_faceted")
 
 summary_table <- gatk_runs |>
   dplyr::rowwise() |>

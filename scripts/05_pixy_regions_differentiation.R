@@ -63,34 +63,54 @@ add_genome_position <- function(df) {
 }
 
 plot_pairwise_fst_heatmap <- function(pairwise_summary) {
-  ordered_pops <- sort(unique(c(pairwise_summary$pop1, pairwise_summary$pop2)))
+  ordered_pops <- c("FNM", "GRL", "NYS", "SKW", "WRG")
+  ordered_labels <- region_display(ordered_pops)
 
-  heatmap_df <- pairwise_summary |>
+  pairwise_symmetric <- pairwise_summary |>
     dplyr::select(pop1, pop2, mean_fst_weighted_by_snps) |>
     dplyr::bind_rows(
-      pairwise_summary |>
-        dplyr::transmute(
-          pop1 = .data$pop2,
-          pop2 = .data$pop1,
-          mean_fst_weighted_by_snps = .data$mean_fst_weighted_by_snps
-        )
+      tibble::tibble(
+        pop1 = pairwise_summary$pop2,
+        pop2 = pairwise_summary$pop1,
+        mean_fst_weighted_by_snps = pairwise_summary$mean_fst_weighted_by_snps
+      )
     ) |>
-    dplyr::mutate(
-      pop1 = factor(.data$pop1, levels = ordered_pops),
-      pop2 = factor(.data$pop2, levels = ordered_pops)
+    dplyr::bind_rows(
+      tibble::tibble(
+        pop1 = ordered_pops,
+        pop2 = ordered_pops,
+        mean_fst_weighted_by_snps = 0
+      )
     )
 
+  heatmap_df <- tidyr::expand_grid(pop1 = ordered_pops, pop2 = ordered_pops) |>
+    dplyr::left_join(
+      pairwise_symmetric,
+      by = c("pop1", "pop2")
+    ) |>
+    dplyr::mutate(
+      pop1_index = match(.data$pop1, ordered_pops),
+      pop2_index = match(.data$pop2, ordered_pops),
+      display_fst = pmax(.data$mean_fst_weighted_by_snps, 0, na.rm = TRUE),
+      pop1 = factor(.data$pop1, levels = ordered_pops),
+      pop2 = factor(.data$pop2, levels = ordered_pops)
+    ) |>
+    dplyr::filter(.data$pop2_index >= .data$pop1_index)
+
+  heatmap_max <- max(heatmap_df$display_fst, na.rm = TRUE)
+
   p <- heatmap_df |>
-    ggplot(aes(x = .data$pop1, y = .data$pop2, fill = .data$mean_fst_weighted_by_snps)) +
+    ggplot(aes(x = .data$pop1, y = .data$pop2, fill = .data$display_fst)) +
     geom_tile(color = "white", linewidth = 0.4) +
-    geom_text(aes(label = sprintf("%.4f", .data$mean_fst_weighted_by_snps)), size = 3) +
-    scale_fill_gradient2(
-      low = "#2f4f4f",
-      mid = "white",
-      high = "#b35c44",
-      midpoint = 0,
+    geom_text(aes(label = sprintf("%.4f", .data$display_fst)), size = 3) +
+    scale_fill_gradient(
+      low = "#ADD7E4",
+      high = "#6D878E",
+      limits = c(0, heatmap_max),
       name = "Mean FST"
     ) +
+    scale_x_discrete(labels = ordered_labels, drop = FALSE) +
+    scale_y_discrete(labels = ordered_labels, drop = FALSE) +
     labs(x = NULL, y = NULL, title = "Pairwise regional FST") +
     coord_equal() +
     theme(

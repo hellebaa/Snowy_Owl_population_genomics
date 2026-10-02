@@ -1,43 +1,43 @@
 sample_id,sample_short_id,individual_id,country,location,population_id,collection_year,sex_field,age,tissue
-FNM01_9-X42_S17_L002,FNM01,FNM01,Norway,Finnmark,FN,2011,NA,Nestling,BF
-FNM02_10-X43_S20_L002,FNM02,TB00878,Norway,Finnmark,FN,2011,NA,Nestling,BF
-FNM03_11-X44_S23_L002,FNM03,TB00405,Norway,Finnmark,FN,2011,NA,Nestling,BF
-FNM04_12-X45_S26_L002,FNM04,TB00407,Norway,Finnmark,FN,2011,NA,Nestling,BF
-FNM05_13-X46_S29_L002,FNM05,TB00402,Norway,Finnmark,FN,2011,NA,Nestling,BF
-FNM06_14-X47_S32_L002,FNM06,FNM06,Norway,Finnmark,FN,2011,NA,Nestling,BF
-FNM07_15-X48_S35_L002,FNM07,TB00410,Norway,Finnmark,FN,2011,NA,Nestling,BF
-FNM08_merged_X1,FNM08,BA40507,Norway,Finnmark,FN,2015,NA,Nestling,BL
-FNM09_merged_X2,FNM09,FNM09,Norway,Finnmark,FN,2015,NA,Nestling,BL
-FNM10_merged_X3,FNM10,FNM10,Norway,Finnmark,FN,2015,NA,Nestling,BL
-FNM11_merged_X4,FNM11,FNM11,Norway,Finnmark,FN,2015,NA,Nestling,BL
-FNM12_5-X5_S119_L004,FNM12,FNM12,Norway,Finnmark,FN,2015,NA,Nestling,BL
-FNM13_merged_X6,FNM13,FNM13,Norway,Finnmark,FN,2015,NA,Nestling,BL
-FNM15_merged_X8,FNM15,BA40510,Norway,Finnmark,FN,2015,NA,Nestling,BL
-FNM16_16-X49_S37_L002,FNM16,BA40505,Norway,Finnmark,FN,2015,NA,Nestling,BL
-FNM17_17-X50_S18_L002,FNM17,TB00412,Norway,Finnmark,FN,2011,NA,Nestling,BF
-GRL01_merged_X11,GRL01,2438,Greenland,Eastern Greenland,GR,1996,F,Adult,MU
-GRL02_merged_X12,GRL02,2445,Greenland,Eastern Greenland,GR,2008,F,Juvenile,MU
-GRL03_merged_X13,GRL03,2439,Greenland,Eastern Greenland,GR,2000,F,Juvenile,MU
-GRL04_merged_X14,GRL04,2440,Greenland,Eastern Greenland,GR,2001,M,Juvenile,MU
-GRL05_merged_X15,GRL05,2437,Greenland,Eastern Greenland,GR,2006,F,Adult,MU
-GRL06_merged_X16,GRL06,2444,Greenland,Eastern Greenland,GR,2001,M,Juvenile,MU
-GRL07_merged_X17,GRL07,2442,Greenland,Eastern Greenland,GR,1998,M,Juvenile,MU
-GRL08_merged_X18,GRL08,2446,Greenland,Eastern Greenland,GR,1998,M,Juvenile,MU
-GRL09_merged_X19,GRL09,2441,Greenland,Eastern Greenland,GR,2000,M,Juvenile,MU
-GRL10_merged_X20,GRL10,2443,Greenland,Eastern Greenland,GR,2001,F,Juvenile,MU
-NY01_DAG-BS-1_S1,NY01,Unbanded (dead),USA,New York State,NY,2021,M,Second-year,FE
-NY02_DAG-BS-2_S2,NY02,0699-03116,USA,New York State,NY,2020,F,After hatch-year,FE
-NY03_DAG-BS-3_S3,NY03,0829-00946,USA,New York State,NY,2019,F,Second-year,FE
-NY04_DAG-BS-4_S4,NY04,0829-00947,USA,New York State,NY,2020,F,After first-year,FE
-NY05_DAG-BS-5_S5,NY05,0829-00948,USA,New York State,NY,2020,F,After third-year,FE
-NY06_DAG-BS-6_S6,NY06,0289-00949,USA,New York State,NY,2020,F,After first-year,FE
-NY07_DAG-BS-7_S7,NY07,0829-00950,USA,New York State,NY,2020,F,Third-year,FE
-NY08_DAG-BS-8_S8,NY08,0289-00951,USA,New York State,NY,2020,F,After third-year,FE
-NY09_DAG-BS-9_S9,NY09,0829-00952,USA,New York State,NY,2020,F,After hatch-year,FE
-NY10_DAG-BS-10_S10,NY10,0829-00953,USA,New York State,NY,2020,F,After third-year,FE
-NY11_DAG-BS-11_S11,NY11,1238-04099,USA,New York State,NY,2021,M,Second-year,FE
-NY12_DAG-BS-12_S12,NY12,NY200822,USA,New York State,NY,2020,F,Hatch-year,FE
-NY13_DAG-BS-13_S13,NY13,NY200818,USA,New York State,NY,2020,M,After second-year,FE
+FNM01_9-X42_S17_L002,FNM01,FNM01,,Fennoscandia,FN,2011,NA,Nestling,BF
+FNM02_10-X43_S20_L002,FNM02,TB00878,,Fennoscandia,FN,2011,NA,Nestling,BF
+FNM03_11-X44_S23_L002,FNM03,TB00405,,Fennoscandia,FN,2011,NA,Nestling,BF
+FNM04_12-X45_S26_L002,FNM04,TB00407,,Fennoscandia,FN,2011,NA,Nestling,BF
+FNM05_13-X46_S29_L002,FNM05,TB00402,,Fennoscandia,FN,2011,NA,Nestling,BF
+FNM06_14-X47_S32_L002,FNM06,FNM06,,Fennoscandia,FN,2011,NA,Nestling,BF
+FNM07_15-X48_S35_L002,FNM07,TB00410,,Fennoscandia,FN,2011,NA,Nestling,BF
+FNM08_merged_X1,FNM08,BA40507,,Fennoscandia,FN,2015,NA,Nestling,BL
+FNM09_merged_X2,FNM09,FNM09,,Fennoscandia,FN,2015,NA,Nestling,BL
+FNM10_merged_X3,FNM10,FNM10,,Fennoscandia,FN,2015,NA,Nestling,BL
+FNM11_merged_X4,FNM11,FNM11,,Fennoscandia,FN,2015,NA,Nestling,BL
+FNM12_5-X5_S119_L004,FNM12,FNM12,,Fennoscandia,FN,2015,NA,Nestling,BL
+FNM13_merged_X6,FNM13,FNM13,,Fennoscandia,FN,2015,NA,Nestling,BL
+FNM15_merged_X8,FNM15,BA40510,,Fennoscandia,FN,2015,NA,Nestling,BL
+FNM16_16-X49_S37_L002,FNM16,BA40505,,Fennoscandia,FN,2015,NA,Nestling,BL
+FNM17_17-X50_S18_L002,FNM17,TB00412,,Fennoscandia,FN,2011,NA,Nestling,BF
+GRL01_merged_X11,GRL01,2438,Greenland,,GR,1996,F,Adult,MU
+GRL02_merged_X12,GRL02,2445,Greenland,,GR,2008,F,Juvenile,MU
+GRL03_merged_X13,GRL03,2439,Greenland,,GR,2000,F,Juvenile,MU
+GRL04_merged_X14,GRL04,2440,Greenland,,GR,2001,M,Juvenile,MU
+GRL05_merged_X15,GRL05,2437,Greenland,,GR,2006,F,Adult,MU
+GRL06_merged_X16,GRL06,2444,Greenland,,GR,2001,M,Juvenile,MU
+GRL07_merged_X17,GRL07,2442,Greenland,,GR,1998,M,Juvenile,MU
+GRL08_merged_X18,GRL08,2446,Greenland,,GR,1998,M,Juvenile,MU
+GRL09_merged_X19,GRL09,2441,Greenland,,GR,2000,M,Juvenile,MU
+GRL10_merged_X20,GRL10,2443,Greenland,,GR,2001,F,Juvenile,MU
+NY01_DAG-BS-1_S1,NY01,Unbanded (dead),USA,New York State,NY,,M,SY,FE
+NY02_DAG-BS-2_S2,NY02,0699-03116,USA,New York State,NY,,F,AHY,FE
+NY03_DAG-BS-3_S3,NY03,0829-00946,USA,New York State,NY,,F,SY,FE
+NY04_DAG-BS-4_S4,NY04,0829-00947,USA,New York State,NY,,F,AFY,FE
+NY05_DAG-BS-5_S5,NY05,0829-00948,USA,New York State,NY,,F,ATY,FE
+NY06_DAG-BS-6_S6,NY06,0289-00949,USA,New York State,NY,,F,AFY,FE
+NY07_DAG-BS-7_S7,NY07,0829-00950,USA,New York State,NY,,F,TY,FE
+NY08_DAG-BS-8_S8,NY08,0289-00951,USA,New York State,NY,,F,ATY,FE
+NY09_DAG-BS-9_S9,NY09,0829-00952,USA,New York State,NY,,F,AHY,FE
+NY10_DAG-BS-10_S10,NY10,0829-00953,USA,New York State,NY,,F,ATY,FE
+NY11_DAG-BS-11_S11,NY11,1238-04099,USA,New York State,NY,,M,SY,FE
+NY12_DAG-BS-12_S12,NY12,NY200822,USA,New York State,NY,,F,Hy,FE
+NY13_DAG-BS-13_S13,NY13,NY200818,USA,New York State,NY,,M,ASY,FE
 SKW01_merged_X21,SKW01,2415,Canada,Saskatchewan,SK,2010,F,Adult,MU
 SKW02_merged_X22,SKW02,2416,Canada,Saskatchewan,SK,2005,F,Juvenile,MU
 SKW03_merged_X23,SKW03,2417,Canada,Saskatchewan,SK,2013,F,Adult,MU

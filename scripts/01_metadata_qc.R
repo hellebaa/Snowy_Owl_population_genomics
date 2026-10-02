@@ -139,6 +139,14 @@ pca_filtered_ids <- if (file.exists(paths$pca_filtered_eigenvec)) {
   tibble::tibble(sample_id = character())
 }
 
+# Match final autosomal PCA membership to the curated50 pixy list.
+curated_pca_list <- "data/external/pixy_curated50_noQUAL_DP5_noMAF/curated50_samples.txt"
+if (file.exists(curated_pca_list)) {
+  ids <- readLines(curated_pca_list)
+  stopifnot(length(ids) == 50, !anyDuplicated(ids))
+  pca_filtered_ids <- tibble::tibble(sample_id = ids)
+}
+
 sample_metadata <- snowy |>
   dplyr::left_join(qc, by = "sample_id") |>
   dplyr::mutate(
@@ -166,7 +174,9 @@ sample_metadata <- snowy |>
     ),
     include_pca = sample_id %in% pca_ids$sample_id,
     include_pca_filtered = sample_id %in% pca_filtered_ids$sample_id,
-    include_pixy = sample_id %in% pixy_all$sample_id,
+    include_pixy = qc_flags == "OK" &
+      contamination_flag == "keep" &
+      relatedness_flag != "remove",
     include_roh = sample_id %in% roh_indiv$sample_id,
     include_gone = include_pixy & mean_depth >= 25,
     library_id = old_id_for_join,
@@ -184,6 +194,14 @@ sample_metadata <- snowy |>
     )
   ) |>
   dplyr::left_join(location_lookup, by = "region") |>
+  # FNM samples are currently known only as Fennoscandian; the older
+  # metadata's Norway/Finnmark assignment is too specific for all samples.
+  dplyr::mutate(
+    Country = dplyr::if_else(region == "FNM", NA_character_, Country),
+    Location = dplyr::if_else(region == "FNM", "Fennoscandia", Location),
+    latitude = dplyr::if_else(region == "FNM", NA_real_, latitude),
+    longitude = dplyr::if_else(region == "FNM", NA_real_, longitude)
+  ) |>
   dplyr::select(
     sample_id,
     individual_id,

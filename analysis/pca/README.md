@@ -1,3 +1,11 @@
+# Current curated50 PCA update
+
+The final autosomal PCA sample set now matches pixy: 50 individuals, retaining FNM12. Run `Rscript scripts/02e_pca_curated50.R` from `new/` to import downloaded GATK results, regenerate ANGSD locally and update Figure S2, Tables S2/S4 and sample inclusion. GATK: 564,409 SNPs; ANGSD: 39,231 sites, PC1 2.203%, PC2 2.187%. Z/W diagnostics are unchanged.
+
+The full-spectrum export has now been downloaded and verified: all 50 eigenvalues are available, and the leading coordinates agree with the earlier export. GATK PC1–PC4 explain 2.145%, 2.102%, 2.095% and 2.089% of total variance. Figure S2 and Table S4 now use the full-spectrum denominator. The figure shows two GATK PC1 outliers, GRL01 and WRG09, from different regions; their cause is unresolved.
+
+The following records describe historical runs, not the current final sample set.
+
 # PCA
 
 This analysis summarizes population structure using autosomal PCA, ANGSD

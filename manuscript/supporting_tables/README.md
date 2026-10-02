@@ -10,7 +10,7 @@ this folder may be overwritten when `scripts/11_supporting_tables.R` is rerun.
 
 ## Proposed Tables
 
-### Table S1. Sample metadata and analysis inclusion overview
+### Table S1. Sample metadata overview
 
 One row per Snowy Owl sample, including sample identifiers, sampling region, collection year, observed/field sex, age, and tissue. Abbreviations: M = male, F = female, NA = unavailable or unknown; MU = muscle, BL = blood, BF = blood feather, FE = feather.
 
@@ -32,7 +32,7 @@ Manual check: confirm that 0.03 is the preferred reporting threshold. Full pairw
 
 Summary of PCA datasets, including GATK autosomal PCA and ANGSD pseudohaploid PCA inputs, sample filters, site filters, retained sample counts, retained site counts when available, and PC1/PC2 variance explained.
 
-Manual check: confirm exact GATK SNP counts and LD-pruning details if those should be reported precisely. The ANGSD autosomal PCA with QC-filtered samples and MAC >= 3 is the recommended Figure S2 candidate.
+Current Figure S2 uses 50 individuals for both autosomal PCAs (the pixy sample set), with 564,409 GATK SNPs and 39,231 ANGSD sites. GATK percentages now use all 50 eigenvalues: PC1 2.145% and PC2 2.102%. The Z and female-only W diagnostics retain 66 and 44 individuals, respectively. Regenerate using scripts/02e_pca_curated50.R.
 
 ### Table S5. Pairwise FST and dXY among sampling regions
 

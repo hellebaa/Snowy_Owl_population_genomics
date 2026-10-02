@@ -62,7 +62,7 @@ placeholders.
 The downstream analyses expect these primary inputs once downloaded from HPC:
 
 - `SnowyOwl_autosomes_finalFilters_noContam.recalc.vcf.gz`
-- `SnowyOwl_autosomes_allSites_noContam.vcf.gz`
+- `SnowyOwl_autosomes_allSites_noContam_noQUAL_DP5.vcf.gz`
 - pixy output tables for pi, Tajima's D, FST, and dXY
 - PCA outputs
 - ROH/heterozygosity outputs

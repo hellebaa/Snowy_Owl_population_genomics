@@ -24,6 +24,9 @@ results/tables/*
 manuscript/*.ai
 manuscript/*.tmp
 manuscript/~*
+manuscript/edited/
+manuscript/online_data_tables/
+manuscript/supporting_tables/deprecated_old_numbering/
 
 # Genomics data and indexes
 *.bam

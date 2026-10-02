@@ -17,6 +17,7 @@ top_pairwise_file <- file.path(out_tab_dir, "SnowyOwl_regions_top200_pairwise_fs
 gff_file <- here(paths$genome_gff %||% "data/external/genome/bBubSca1.1.hap1.gff")
 repeatmasker_file <- here(paths$repeatmasker_out %||% "data/external/genome/hap1_curated.fasta.inter.fa.out")
 centromere_file <- here(paths$centromere_bed %||% "data/metadata/centromeres/putative_centromeres.bed")
+pericentromere_flank_bp <- paths$pericentromere_flank_bp %||% 1000000
 
 read_required_csv <- function(file) {
   if (!file.exists(file)) {
@@ -240,6 +241,53 @@ add_centromere_distance <- function(windows, centromeres) {
     dplyr::left_join(distance_df, by = "window_id")
 }
 
+overlaps_any <- function(query, subject) {
+  vapply(
+    seq_len(nrow(query)),
+    function(i) {
+      any(
+        subject$chromosome == query$chromosome[i] &
+          subject$start <= query$window_pos_2[i] &
+          subject$end >= query$window_pos_1[i]
+      )
+    },
+    logical(1)
+  )
+}
+
+annotate_centromere_regions <- function(windows, centromeres, flank_bp) {
+  if (nrow(centromeres) == 0) {
+    return(
+      windows |>
+        dplyr::mutate(
+          centromere_region = factor("Other", levels = c("Centromere", "Pericentromere", "Other"))
+        )
+    )
+  }
+
+  pericentromeres <- centromeres |>
+    dplyr::mutate(
+      start = pmax(1, .data$start - flank_bp),
+      end = .data$end + flank_bp
+    )
+
+  in_centromere <- overlaps_any(windows, centromeres)
+  in_pericentromere_extended <- overlaps_any(windows, pericentromeres)
+
+  windows |>
+    dplyr::mutate(
+      centromere_region = dplyr::case_when(
+        in_centromere ~ "Centromere",
+        in_pericentromere_extended ~ "Pericentromere",
+        TRUE ~ "Other"
+      ),
+      centromere_region = factor(
+        .data$centromere_region,
+        levels = c("Centromere", "Pericentromere", "Other")
+      )
+    )
+}
+
 make_window_id <- function(df) {
   df |>
     dplyr::mutate(
@@ -309,6 +357,34 @@ recurrent_annotated <- recurrent_windows |>
 all_windows_centromere_distance <- fst_windows |>
   add_centromere_distance(centromeres) |>
   dplyr::mutate(distance_to_centromere_mb = .data$nearest_centromere_distance_bp / 1e6)
+
+all_windows_centromere_regions <- all_windows_centromere_distance |>
+  annotate_centromere_regions(centromeres, pericentromere_flank_bp) |>
+  dplyr::mutate(mean_fst_display = pmax(.data$mean_fst_across_pairs, 0, na.rm = TRUE))
+
+centromere_region_summary <- all_windows_centromere_regions |>
+  dplyr::group_by(.data$centromere_region) |>
+  dplyr::summarise(
+    metric = "mean_fst_across_pairs_negative_set_to_zero",
+    n_windows = dplyr::n(),
+    mean = mean(.data$mean_fst_display, na.rm = TRUE),
+    median = median(.data$mean_fst_display, na.rm = TRUE),
+    min = min(.data$mean_fst_display, na.rm = TRUE),
+    max = max(.data$mean_fst_display, na.rm = TRUE),
+    q25 = as.numeric(stats::quantile(.data$mean_fst_display, 0.25, na.rm = TRUE)),
+    q75 = as.numeric(stats::quantile(.data$mean_fst_display, 0.75, na.rm = TRUE)),
+    .groups = "drop"
+  ) |>
+  dplyr::select(.data$metric, .data$centromere_region, dplyr::everything())
+
+centromere_region_test <- tibble::tibble(
+  metric = "mean_fst_across_pairs_negative_set_to_zero",
+  test = "Kruskal-Wallis rank-sum test",
+  grouping = "Centromere vs Pericentromere vs Other",
+  statistic = unname(stats::kruskal.test(mean_fst_display ~ centromere_region, data = all_windows_centromere_regions)$statistic),
+  df = unname(stats::kruskal.test(mean_fst_display ~ centromere_region, data = all_windows_centromere_regions)$parameter),
+  p_value = stats::kruskal.test(mean_fst_display ~ centromere_region, data = all_windows_centromere_regions)$p.value
+)
 
 centromere_distance_summary <- all_windows_centromere_distance |>
   dplyr::filter(!is.na(.data$distance_to_centromere_mb)) |>
@@ -397,6 +473,16 @@ readr::write_csv(
 )
 
 readr::write_csv(
+  centromere_region_summary,
+  file.path(out_tab_dir, "SnowyOwl_regions_mean_fst_centromere_regions_summary.csv")
+)
+
+readr::write_csv(
+  centromere_region_test,
+  file.path(out_tab_dir, "SnowyOwl_regions_mean_fst_centromere_regions_kruskal_test.csv")
+)
+
+readr::write_csv(
   recurrent_outlier_centromere_distance_summary,
   file.path(out_tab_dir, "SnowyOwl_regions_recurrent_fst_outlier_distance_to_centromere_summary.csv")
 )
@@ -417,6 +503,34 @@ ggsave(
   file.path(out_fig_dir, "SnowyOwl_regions_mean_fst_distance_to_centromere.png"),
   distance_plot,
   width = 6,
+  height = 4,
+  dpi = 350
+)
+
+centromere_region_plot <- all_windows_centromere_regions |>
+  dplyr::filter(!is.na(.data$centromere_region), !is.na(.data$mean_fst_display)) |>
+  ggplot(aes(x = .data$centromere_region, y = .data$mean_fst_display, fill = .data$centromere_region)) +
+  geom_boxplot(width = 0.55, outlier.shape = NA, alpha = 0.75, na.rm = TRUE) +
+  geom_jitter(width = 0.18, size = 0.25, alpha = 0.16, na.rm = TRUE) +
+  scale_fill_manual(
+    values = c("Centromere" = "#7a3b2e", "Pericentromere" = "#b35c44", "Other" = "#2f4f4f"),
+    guide = "none"
+  ) +
+  labs(
+    x = NULL,
+    y = "Mean pairwise FST",
+    title = "Mean FST by putative centromere region",
+    subtitle = paste0(
+      "Negative estimates set to zero; Kruskal-Wallis p = ",
+      format_p_value(centromere_region_test$p_value)
+    )
+  ) +
+  theme(axis.text.x = element_text(size = 9))
+
+ggsave(
+  file.path(out_fig_dir, "SnowyOwl_regions_mean_fst_centromere_regions_boxplot.png"),
+  centromere_region_plot,
+  width = 5.5,
   height = 4,
   dpi = 350
 )

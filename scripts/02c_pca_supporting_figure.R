@@ -16,7 +16,7 @@ read_eigen_pve <- function(file) {
 
 axis_label <- function(pc, eigen) {
   pve <- eigen$pve[match(pc, eigen$pc)]
-  paste0(pc, " (", round(pve, 1), "%)")
+  if (is.na(pve)) pc else paste0(pc, " (", round(pve, 1), "%)")
 }
 
 make_panel <- function(scores, eigen, title) {
@@ -43,24 +43,22 @@ make_panel <- function(scores, eigen, title) {
 }
 
 gatk_scores <- readr::read_csv(
-  file.path(paths$results_tables, "pca", "SnowyOwl_PCA_GATK_regenerated_scores.csv"),
+  file.path(paths$results_tables, "pca", "SnowyOwl_PCA_GATK_curated50_scores.csv"),
   show_col_types = FALSE
-) |>
-  dplyr::filter(run_id == "runA_mac3")
+)
 
 gatk_eigen <- readr::read_csv(
-  file.path(paths$results_tables, "pca", "SnowyOwl_PCA_GATK_regenerated_eigenvalues.csv"),
+  file.path(paths$results_tables, "pca", "SnowyOwl_PCA_GATK_curated50_eigenvalues.csv"),
   show_col_types = FALSE
 ) |>
-  dplyr::filter(run_id == "runA_mac3") |>
   dplyr::select(pc, pve)
 
 angsd_auto_scores <- readr::read_csv(
-  file.path(paths$results_tables, "pca", "SnowyOwl_PCA_ANGSD_pseudohaploid_autosomes_qc_filtered_mac3_scores.csv"),
+  file.path(paths$results_tables, "pca", "SnowyOwl_PCA_ANGSD_pseudohaploid_autosomes_curated50_mac3_scores.csv"),
   show_col_types = FALSE
 )
 angsd_auto_eigen <- read_eigen_pve(
-  file.path(paths$results_tables, "pca", "SnowyOwl_PCA_ANGSD_pseudohaploid_autosomes_qc_filtered_mac3_eigenvalues.csv")
+  file.path(paths$results_tables, "pca", "SnowyOwl_PCA_ANGSD_pseudohaploid_autosomes_curated50_mac3_eigenvalues.csv")
 )
 
 angsd_z_scores <- readr::read_csv(

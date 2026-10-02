@@ -51,6 +51,7 @@ table_s2 <- metadata |>
     notes
   ) |>
   round_numeric(6)
+table_s2$sex_field[is.na(table_s2$sex_field) | trimws(table_s2$sex_field) == ""] <- "NA"
 write_supporting_csv(table_s2, "Table_S2_sequencing_and_genotype_QC.csv")
 
 # S3: Pairwise KING kinship estimates above the reporting threshold.
@@ -102,25 +103,12 @@ table_s3 <- king_pairs |>
   round_numeric(6)
 write_supporting_csv(table_s3, "Table_S3_sample_exclusions_and_KING_relatedness.csv")
 
-# S4: PCA dataset summaries.
-count_rows <- function(file) if (file.exists(file)) nrow(readr::read_csv(file, show_col_types = FALSE)) else NA_integer_
-first_pve <- function(file, pc_name) {
-  if (!file.exists(file)) return(NA_real_)
-  x <- readr::read_csv(file, show_col_types = FALSE)
-  x$pve[match(pc_name, x$pc)]
-}
-
-gatk_eigen <- if (file.exists(paths$pca_filtered_eigenval)) scan(paths$pca_filtered_eigenval, quiet = TRUE) else numeric()
-gatk_pve <- gatk_eigen / sum(gatk_eigen) * 100
-
-table_s4 <- tibble::tribble(
-  ~dataset, ~input_type, ~sample_filter, ~site_filter, ~n_samples, ~n_sites_or_snps, ~pc1_variance_percent, ~pc2_variance_percent, ~recommended_use,
-  "GATK autosomes, filtered", "diploid SNP genotypes", "Historical filtered PCA set; high-missingness and close-related samples removed", "Filtered autosomal SNPs, LD-pruned before PCA", count_rows(file.path(paths$results_tables, "pca", "SnowyOwl_PCA_autosomes_filtered_scores.csv")), NA_real_, gatk_pve[1], gatk_pve[2], "Figure S1 candidate",
-  "ANGSD pseudohaploid autosomes", "pseudohaploid alleles", "QC-passing samples; relatedness_flag == keep; contamination_flag == keep", "Biallelic sites, MAC >= 3", count_rows(file.path(paths$results_tables, "pca", "SnowyOwl_PCA_ANGSD_pseudohaploid_autosomes_qc_filtered_mac3_scores.csv")), 38800, first_pve(file.path(paths$results_tables, "pca", "SnowyOwl_PCA_ANGSD_pseudohaploid_autosomes_qc_filtered_mac3_eigenvalues.csv"), "PC1"), first_pve(file.path(paths$results_tables, "pca", "SnowyOwl_PCA_ANGSD_pseudohaploid_autosomes_qc_filtered_mac3_eigenvalues.csv"), "PC2"), "Figure S2 candidate",
-  "ANGSD pseudohaploid Z", "pseudohaploid alleles", "All available ANGSD samples", "Biallelic sites, MAC >= 1", count_rows(file.path(paths$results_tables, "pca", "SnowyOwl_PCA_ANGSD_pseudohaploid_Z_scores.csv")), NA_real_, first_pve(file.path(paths$results_tables, "pca", "SnowyOwl_PCA_ANGSD_pseudohaploid_Z_eigenvalues.csv"), "PC1"), first_pve(file.path(paths$results_tables, "pca", "SnowyOwl_PCA_ANGSD_pseudohaploid_Z_eigenvalues.csv"), "PC2"), "Diagnostic only",
-  "ANGSD pseudohaploid W", "pseudohaploid alleles", "All available ANGSD samples", "Biallelic sites, MAC >= 1", count_rows(file.path(paths$results_tables, "pca", "SnowyOwl_PCA_ANGSD_pseudohaploid_W_scores.csv")), NA_real_, first_pve(file.path(paths$results_tables, "pca", "SnowyOwl_PCA_ANGSD_pseudohaploid_W_eigenvalues.csv"), "PC1"), first_pve(file.path(paths$results_tables, "pca", "SnowyOwl_PCA_ANGSD_pseudohaploid_W_eigenvalues.csv"), "PC2"), "Diagnostic only"
-) |>
-  round_numeric(3)
+# S4 is generated from the verified curated50 results by 02e_pca_curated50.R.
+# Do not replace it with summaries of historical PCA runs.
+s4_file <- file.path(supporting_dir, "curated", "Table_S4_PCA_dataset_summaries.csv")
+if (!file.exists(s4_file)) stop("Run scripts/02e_pca_curated50.R before building supporting tables.")
+table_s4 <- readr::read_csv(s4_file, show_col_types = FALSE)
+stopifnot(all(table_s4$n_samples[1:2] == 50))
 write_supporting_csv(table_s4, "Table_S4_PCA_dataset_summaries.csv")
 
 # S5: Pairwise differentiation and divergence among sampling regions.
@@ -264,7 +252,7 @@ write_supporting_csv(table_s7, "Table_S7_centromere_pericentromere_diversity.csv
 
 table_index <- tibble::tribble(
   ~table_id, ~filename, ~title, ~recommended_destination, ~manual_status,
-  "Table S1", "Table_S1_sample_metadata_and_analysis_inclusion.csv", "Sample metadata and analysis inclusion overview.", "Supporting information", "Needs manual check: verify sample identifiers, locations, collection years, observed sex, age, tissue, and public metadata fields.",
+  "Table S1", "Table_S1_sample_metadata_and_analysis_inclusion.csv", "Sample metadata overview.", "Supporting information", "Needs manual check: verify sample identifiers, locations, collection years, observed sex, age, tissue, and public metadata fields.",
   "Table S2", "Table_S2_sequencing_and_genotype_QC.csv", "Sequencing and genotype QC summary for all Snowy Owl samples.", "Supporting information", "Needs manual check: confirm QC thresholds, sex-call wording, and exclusion language.",
   "Table S3", "Table_S3_sample_exclusions_and_KING_relatedness.csv", "Pairwise KING kinship estimates above the reporting threshold.", "Supporting information", "Confirm that 0.03 is the preferred reporting threshold; full all-pair KING results are available as online data.",
   "Table S4", "Table_S4_PCA_dataset_summaries.csv", "Summary of GATK and ANGSD PCA datasets and filters.", "Supporting information", "Needs manual check: confirm GATK SNP count/LD-pruning details if exact SNP numbers should be reported.",

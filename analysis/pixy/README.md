@@ -11,23 +11,37 @@ pixy was chosen because it provides unbiased estimates of population
 genetic summary statistics from datasets containing missing data and
 requires both variant and invariant callable sites.
 
-Input VCF:
+Primary pixy input VCF:
 
-* SnowyOwl_autosomes_allSites_noContam.vcf.gz
+* SnowyOwl_autosomes_allSites_curated50_noQUAL_DP5_noMAF.vcf.gz
 
 This VCF contains:
 
-* 1,324,912 filtered autosomal SNPs
-* 36,529,297 filtered callable invariant sites
+* 1,783,056 autosomal SNPs retained without minor-allele-frequency filtering
+* 1,145,122,611 autosomal invariant-site records generated without a
+  site-level invariant-site QUAL filter
 
 for a total of:
 
-* 37,854,209 callable autosomal sites
+* 1,146,905,667 autosomal all-sites records
 
-Two contaminated individuals were removed prior to analysis:
+Invariant genotypes with depth below 5 were set to missing prior to pixy.
+The pixy ALL run used 1,101,113,709 callable sites after pixy's
+statistic-specific missing-data accounting.
 
-* GRL04_merged_X14
-* SKW02_merged_X22
+The final pixy run used a curated set of 50 high-quality individuals. Samples
+with high missingness, contamination-review/remove flags, or close relatedness
+were removed, except `FNM12_5-X5_S119_L004`, which was retained as the
+representative from the related Fennoscandia group. Nucleotide diversity,
+Tajima's D, FST, and dXY are reported from this curated no-MAF run.
+
+Sensitivity analyses on `SUPER_10` showed that the previous 66-sample no-MAF
+run was strongly affected by singleton heterozygotes in the high-missingness
+sample `WRG01_1-WRG1_S28_L001`; removing this sample shifted Tajima's D toward
+the curated-sample estimate.
+
+Final regional sample sizes are FNM = 13, GRL = 8, NYS = 13, SKW = 11, and
+WRG = 5.
 
 All analyses were performed in non-overlapping 50 kb windows.
 
@@ -43,8 +57,8 @@ Population file:
 
 * population_all.txt
 
-This analysis treats all Snowy Owl samples as belonging to a single
-population.
+This analysis treats the curated high-quality Snowy Owl samples as belonging
+to a single population.
 
 Purpose:
 

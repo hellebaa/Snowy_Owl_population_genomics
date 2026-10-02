@@ -1,5 +1,5 @@
 table_id,filename,title,recommended_destination,manual_status
-Table S1,Table_S1_sample_metadata_and_analysis_inclusion.csv,Sample metadata and analysis inclusion overview.,Supporting information,"Needs manual check: verify sample identifiers, locations, collection years, observed sex, age, tissue, and public metadata fields."
+Table S1,Table_S1_sample_metadata_and_analysis_inclusion.csv,Sample metadata overview.,Supporting information,"Needs manual check: verify sample identifiers, locations, collection years, observed sex, age, tissue, and public metadata fields."
 Table S2,Table_S2_sequencing_and_genotype_QC.csv,Sequencing and genotype QC summary for all Snowy Owl samples.,Supporting information,"Needs manual check: confirm QC thresholds, sex-call wording, and exclusion language."
 Table S3,Table_S3_sample_exclusions_and_KING_relatedness.csv,Pairwise KING kinship estimates above the reporting threshold.,Supporting information,Confirm that 0.03 is the preferred reporting threshold; full all-pair KING results are available as online data.
 Table S4,Table_S4_PCA_dataset_summaries.csv,Summary of GATK and ANGSD PCA datasets and filters.,Supporting information,Needs manual check: confirm GATK SNP count/LD-pruning details if exact SNP numbers should be reported.
